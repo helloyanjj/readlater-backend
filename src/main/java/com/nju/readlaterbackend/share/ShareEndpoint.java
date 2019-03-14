@@ -1,14 +1,21 @@
 package com.nju.readlaterbackend.share;
 
+import com.netflix.discovery.DiscoveryClient;
 import com.nju.readlaterbackend.share.data.AddRequest;
 import com.nju.readlaterbackend.share.data.ShareContent;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.ServiceInstance;
+import org.springframework.cloud.client.serviceregistry.Registration;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.util.List;
+import org.slf4j.Logger;
 
 /**
  * created by yanjunjie
@@ -18,6 +25,23 @@ public class ShareEndpoint {
 
     @Inject
     private ContentManagement contentManagement;
+
+    private static final Logger logger = LoggerFactory.getLogger(ShareContent.class);
+
+//    @Autowired
+//    private DiscoveryClient client;
+//
+    @Autowired
+    private Registration registration;
+
+    @RequestMapping(value = "/hello", method = RequestMethod.GET)
+    public String index() {
+//        ServiceInstance instance = serviceInstance();
+        logger.info("/hello,host:" + registration.getHost()+
+                ",service_id:" + registration.getServiceId());
+        return "Hello World";
+
+    }
 
     @POST
     @RequestMapping("addContent")
