@@ -1,24 +1,40 @@
 package com.nju.readlaterbackend.user.data;
 
+import org.springframework.stereotype.Component;
+
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
  * created by yanjunjie
  */
+@Component
 @Entity
 public class User {
     @Id
-    private long userId;
+    @GeneratedValue(strategy= GenerationType.AUTO)
+    private long id;
+
+    private String userId;
     private String userName;
     private String account;
     private String password;
 
-    public long getUserId() {
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getUserId() {
         return userId;
     }
 
-    public void setUserId(long userId) {
+    public void setUserId(String userId) {
         this.userId = userId;
     }
 
@@ -49,7 +65,8 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "userId=" + userId +
+                "id=" + id +
+                ", userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
                 ", account='" + account + '\'' +
                 ", password='" + password + '\'' +

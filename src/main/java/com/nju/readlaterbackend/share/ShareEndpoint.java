@@ -53,7 +53,8 @@ public class ShareEndpoint {
     @GET
     @RequestMapping("getContent")
     public List<ShareContent> getContent() {
-        return contentManagement.getShareContent();
+        List<ShareContent> shareContents = contentManagement.getShareContent();
+        return shareContents;
     }
 
     @POST
