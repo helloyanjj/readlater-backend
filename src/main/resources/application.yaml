@@ -11,7 +11,7 @@ spring:
     application:
         name: rl-backend
     datasource:
-        url: jdbc:mysql://localhost:3306/readlater
+        url: jdbc:mysql://localhost:3306/readlater?serverTimezone=GMT%2B8
         username: root
         password: 88888888
         driver-class-name: com.mysql.cj.jdbc.Driver

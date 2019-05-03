@@ -14,12 +14,11 @@ import javax.persistence.Id;
 @Entity
 public class User {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private String userId;
     private String userName;
-    private String account;
     private String password;
 
     public long getId() {
@@ -46,14 +45,6 @@ public class User {
         this.userName = userName;
     }
 
-    public String getAccount() {
-        return account;
-    }
-
-    public void setAccount(String account) {
-        this.account = account;
-    }
-
     public String getPassword() {
         return password;
     }
@@ -68,7 +59,6 @@ public class User {
                 "id=" + id +
                 ", userId='" + userId + '\'' +
                 ", userName='" + userName + '\'' +
-                ", account='" + account + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }
