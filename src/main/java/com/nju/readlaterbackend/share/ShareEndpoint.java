@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.inject.Inject;
 import javax.ws.rs.*;
 import java.util.List;
+
 import org.slf4j.Logger;
 
 /**
@@ -28,7 +29,7 @@ public class ShareEndpoint {
 
     private static final Logger logger = LoggerFactory.getLogger(ShareContent.class);
 
-//    @Autowired
+    //    @Autowired
 //    private DiscoveryClient client;
 //
     @Autowired
@@ -37,7 +38,7 @@ public class ShareEndpoint {
     @RequestMapping(value = "/hello", method = RequestMethod.GET)
     public String index() {
 //        ServiceInstance instance = serviceInstance();
-        logger.info("/hello,host:" + registration.getHost()+
+        logger.info("/hello,host:" + registration.getHost() +
                 ",service_id:" + registration.getServiceId());
         return "Hello World";
 

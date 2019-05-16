@@ -22,15 +22,24 @@ public class UserEndpoint {
 
     @POST
     @RequestMapping("registerUser")
-    public String registerUser(@RequestBody User user) {
-        userManagement.addUser(user);
-        return "";
+    public boolean registerUser(@RequestBody User user) {
+
+
+        return userManagement.addUser(user);
     }
 
     @GET
     @RequestMapping("validateUser")
     public boolean validateUser(@RequestBody User user) {
         return userManagement.validateUser(user);
+    }
+
+    @POST
+    @RequestMapping("loginWithPwd")
+    public String loginWithPwd(@RequestBody User user) {
+
+
+        return userManagement.loginValid(user);
     }
 }
 

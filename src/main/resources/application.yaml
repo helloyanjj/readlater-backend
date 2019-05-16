@@ -1,5 +1,5 @@
 server:
-    port: 2221
+  port: 2221
 
 eureka:
   client:
@@ -8,14 +8,14 @@ eureka:
 #      defaultZone: http://peer1:1111/eureka/,http://peer2:1112/eureka/
 
 spring:
-    application:
-        name: rl-backend
-    datasource:
-        url: jdbc:mysql://localhost:3306/readlater?serverTimezone=GMT%2B8
-        username: root
-        password: 88888888
-        driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-        show-sql: true
-        hibernate:
-            ddl-auto: update
+  application:
+    name: rl-backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/readlater?serverTimezone=GMT%2B8
+    username: root
+    password: 88888888
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

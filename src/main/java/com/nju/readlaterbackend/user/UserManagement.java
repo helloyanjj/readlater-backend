@@ -1,5 +1,6 @@
 package com.nju.readlaterbackend.user;
 
+import com.nju.readlaterbackend.user.data.MD5Utils;
 import com.nju.readlaterbackend.user.data.User;
 import com.nju.readlaterbackend.user.dto.UserRespository;
 import org.springframework.stereotype.Component;
@@ -22,9 +23,30 @@ public class UserManagement {
         return false;
     }
 
-    public void addUser(User user) {
+    public boolean addUser(User user) {
         user.setUserName("--");
-        userRespository.save(user);
+        try {
+            userRespository.save(user);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
+    public String loginValid(User user) {
+        User userValid = userRespository.findUserByUserId(user.getUserId());
+        if (userValid == null) {
+            return "1";
+        } else if (user.getPassword() != userValid.getPassword()) {
+            return "2";
+        } else return "3";
+    }
+
+    public String encryToken(User user) {
+
+
+        return "";
     }
 
 

@@ -22,6 +22,6 @@ public interface ContentRespository extends JpaRepository<ShareContent, Long> {
             "WHERE sc.id=:id")
     @Transactional
     void changeReadStatus(@Param("id") long id,
-                      @Param("haveRead") String haveRead);
+                          @Param("haveRead") String haveRead);
 
 }

@@ -15,7 +15,7 @@ public class ReadlaterBackendApplicationTests {
     public void testAddShareContent() {
         try {
             sleep(100);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -25,7 +25,7 @@ public class ReadlaterBackendApplicationTests {
     public void testAddShareContentWithOtherParams() {
         try {
             sleep(55);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
@@ -36,7 +36,7 @@ public class ReadlaterBackendApplicationTests {
     public void testGetShareContent() {
         try {
             sleep(60);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -46,7 +46,7 @@ public class ReadlaterBackendApplicationTests {
     public void testGetShareContentWithNull() {
         try {
             sleep(50);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -56,7 +56,7 @@ public class ReadlaterBackendApplicationTests {
     public void testChangeStatus() {
         try {
             sleep(90);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -66,7 +66,7 @@ public class ReadlaterBackendApplicationTests {
     public void testChangeStatusWithOtherParams() {
         try {
             sleep(70);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -76,7 +76,7 @@ public class ReadlaterBackendApplicationTests {
     public void testAddAppStatus() {
         try {
             sleep(99);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -85,7 +85,7 @@ public class ReadlaterBackendApplicationTests {
     public void testAddAppStatusWithOtherParams() {
         try {
             sleep(89);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -94,7 +94,7 @@ public class ReadlaterBackendApplicationTests {
     public void testPushMessage() {
         try {
             sleep(110);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
@@ -104,7 +104,7 @@ public class ReadlaterBackendApplicationTests {
     public void testPushMessageWithNull() {
         try {
             sleep(100);
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
         System.out.println("hello");
